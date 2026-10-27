@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d7e8a3">
+  <title>POKÉ POCKET — The Pocket-Sized Card Club</title>
+  <meta name="description" content="A Game Boy-inspired Pokémon TCG companion for collecting, comparing example prices, planning purchases, and exploring card rarity.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Poké Pocket home"><span class="brand-icon">✦</span> POKÉ<span>POCKET</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#dex">CARD DEX</a><a href="#market">MARKET</a><a href="#lab">ODDS LAB</a><a href="#guide">FIELD GUIDE</a>
+    </nav>
+    <button class="sound-toggle" id="themeBtn" type="button" aria-label="Toggle display mode">☼ DISPLAY</button>
+  </header>
+
+  <main id="home">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> YOUR POCKET-SIZED TCG COMPANION</div>
+        <h1>Gotta <em>collect</em><br>with a plan.</h1>
+        <p class="hero-text">A tiny digital clubhouse for big Pokémon card energy. Discover collecting paths, compare illustrative prices, plan your budget, and explore the maths behind the chase.</p>
+        <div class="hero-actions"><a class="pixel-btn primary" href="#dex">▶ OPEN CARD DEX</a><a class="pixel-btn" href="#lab">TRY THE ODDS LAB ↗</a></div>
+        <div class="hero-stats">
+          <div><strong>001</strong><span>STARTER GUIDE</span></div><div><strong>∞</strong><span>WAYS TO COLLECT</span></div><div><strong>£</strong><span>BUDGET FIRST</span></div>
+        </div>
+      </div>
+      <div class="handheld-wrap" aria-label="Decorative retro handheld console">
+        <div class="spark spark-a">✦</div><div class="spark spark-b">✧</div>
+        <div class="handheld">
+          <div class="console-top"><span>POCKET COMPUTER</span><span class="battery"><i></i><i></i><i></i></span></div>
+          <div class="screen">
+            <div class="screen-head"><span>POKÉ POCKET v1.0</span><span>● REC</span></div>
+            <div class="pixel-sun"></div>
+            <div class="pixel-monster">◢◣<br>◥◤</div>
+            <div class="screen-title">CARD QUEST!</div>
+            <div class="screen-sub">BUILD YOUR OWN COLLECTION</div>
+            <div class="screen-footer"><span>PRESS START</span><span>▼</span></div>
+          </div>
+          <div class="console-controls"><div class="dpad"><span class="up">▲</span><span class="left">◀</span><span class="center"></span><span class="right">▶</span><span class="down">▼</span></div><div class="action-buttons"><b>B</b><b>A</b></div></div>
+          <div class="console-bottom"><span>SELECT</span><span>START</span></div>
+        </div>
+        <div class="floating-card card-pika"><div class="mini-card-art yellow">⚡</div><b>PIKACHU</b><small>Electric · Iconic</small><span class="card-rarity">★ ★ ☆</span></div>
+        <div class="floating-card card-eevee"><div class="mini-card-art lavender">✦</div><b>EEVEE</b><small>Normal · Collector fave</small><span class="card-rarity">★ ☆ ☆</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Collecting reminders"><div>OPEN PACKS FOR FUN <span>✦</span> SINGLES FOR SPECIFIC GOALS <span>✦</span> CHECK CONDITION <span>✦</span> NEVER CHASE LOSSES <span>✦</span> OPEN PACKS FOR FUN <span>✦</span> SINGLES FOR SPECIFIC GOALS <span>✦</span></div></section>
+
+    <section class="section shell" id="dex">
+      <div class="section-heading"><div><div class="eyebrow">01 / THE COLLECTION INDEX</div><h2>Choose your <em>next quest.</em></h2></div><p>Browse starter picks and collection directions. Prices below are illustrative UK estimates, not live quotes.</p></div>
+      <div class="filter-row" role="group" aria-label="Filter cards">
+        <button class="filter active" data-filter="all">ALL PICKS</button><button class="filter" data-filter="budget">BUDGET FRIENDLY</button><button class="filter" data-filter="art">ART HUNTER</button><button class="filter" data-filter="classic">CLASSICS</button>
+        <label class="searchbox">⌕ <input id="cardSearch" type="search" placeholder="Search a card or Pokémon…" aria-label="Search cards"></label>
+      </div>
+      <div class="card-grid" id="cardGrid">
+        <article class="tcg-card" data-kind="budget classic" data-name="pikachu">
+          <div class="card-top"><span>BASIC · ELECTRIC</span><span>058</span></div><div class="art art-yellow"><div class="sunburst"></div><span class="creature">ϟ</span><small>VOLTAGE FRIEND</small></div>
+          <div class="tcg-name">Pikachu</div><div class="card-sub">A timeless mascot pick</div><div class="card-bottom"><span class="rarity">● ○ ○</span><strong>£1–£8</strong></div><div class="card-tags"><span>CLASSIC</span><span>EASY START</span></div>
+        </article>
+        <article class="tcg-card" data-kind="budget art" data-name="eevee">
+          <div class="card-top"><span>BASIC · NORMAL</span><span>133</span></div><div class="art art-lilac"><div class="moon"></div><span class="creature">✧</span><small>EVOLUTION DREAMS</small></div>
+          <div class="tcg-name">Eevee</div><div class="card-sub">Build an evolution collection</div><div class="card-bottom"><span class="rarity">● ○ ○</span><strong>£1–£12</strong></div><div class="card-tags"><span>BUDGET</span><span>THEME SET</span></div>
+        </article>
+        <article class="tcg-card" data-kind="art classic" data-name="gengar">
+          <div class="card-top"><span>STAGE 2 · PSYCHIC</span><span>094</span></div><div class="art art-purple"><div class="orb"></div><span class="creature">☻</span><small>SHADOW CLUB</small></div>
+          <div class="tcg-name">Gengar</div><div class="card-sub">Spooky art and fan-favourite cards</div><div class="card-bottom"><span class="rarity">● ● ○</span><strong>£3–£35</strong></div><div class="card-tags"><span>ART HUNTER</span><span>VARIES BY SET</span></div>
+        </article>
+        <article class="tcg-card" data-kind="art" data-name="mew">
+          <div class="card-top"><span>BASIC · PSYCHIC</span><span>151</span></div><div class="art art-pink"><div class="orbit"></div><span class="creature">✿</span><small>MYTHICAL FIND</small></div>
+          <div class="tcg-name">Mew</div><div class="card-sub">Great for a mythical Pokémon binder</div><div class="card-bottom"><span class="rarity">● ● ●</span><strong>£5–£80+</strong></div><div class="card-tags"><span>ART HUNTER</span><span>WIDE RANGE</span></div>
+        </article>
+        <article class="tcg-card" data-kind="classic" data-name="charizard">
+          <div class="card-top"><span>STAGE 2 · FIRE</span><span>006</span></div><div class="art art-orange"><div class="flame"></div><span class="creature">♨</span><small>THE CHASE</small></div>
+          <div class="tcg-name">Charizard</div><div class="card-sub">Iconic, but prices can climb quickly</div><div class="card-bottom"><span class="rarity">● ● ●</span><strong>£5–£250+</strong></div><div class="card-tags"><span>CLASSIC</span><span>RESEARCH FIRST</span></div>
+        </article>
+        <article class="tcg-card" data-kind="budget art" data-name="snorlax">
+          <div class="card-top"><span>BASIC · NORMAL</span><span>143</span></div><div class="art art-green"><div class="leaf"></div><span class="creature">zZ</span><small>SLOW COLLECTOR</small></div>
+          <div class="tcg-name">Snorlax</div><div class="card-sub">Build a cosy, character-led collection</div><div class="card-bottom"><span class="rarity">● ○ ○</span><strong>£1–£20</strong></div><div class="card-tags"><span>BUDGET</span><span>CHARACTER SET</span></div>
+        </article>
+      </div>
+      <div class="price-note">ⓘ Example ranges only. Actual prices depend on exact set, card number, language, condition, grading, and current demand. Always check recent sold listings before buying.</div>
+    </section>
+
+    <section class="market-band" id="market"><div class="shell market-inner">
+      <div><div class="eyebrow">02 / THE MARKET STATION</div><h2>Buy the card.<br><em>Not the hype.</em></h2><p>Use this quick checklist before spending. A card’s asking price is not the same as what it sells for.</p><a class="pixel-btn primary" href="#guide">READ THE FIELD GUIDE ↘</a></div>
+      <div class="market-panel"><div class="panel-head"><span>BUYER CHECKLIST.EXE</span><span class="status">READY</span></div>
+        <label class="checkline"><input type="checkbox"> Exact set name and card number match</label>
+        <label class="checkline"><input type="checkbox"> Condition and whitening checked in photos</label>
+        <label class="checkline"><input type="checkbox"> Recent sold listings compared</label>
+        <label class="checkline"><input type="checkbox"> Seller feedback and return policy reviewed</label>
+        <label class="checkline"><input type="checkbox"> Total cost includes shipping and fees</label>
+        <div class="panel-footer">5 CHECKS = A SMARTER PURCHASE <span>✓</span></div>
+      </div>
+    </div></section>
+
+    <section class="section shell" id="lab">
+      <div class="section-heading"><div><div class="eyebrow">03 / THE ODDS LAB</div><h2>Run the <em>numbers.</em></h2></div><p>Explore pack-opening probability. This model is for learning, not a prediction of a particular card pull.</p></div>
+      <div class="lab-grid">
+        <div class="lab-controls">
+          <div class="lab-label">YOUR PACK PLAN</div>
+          <label class="range-label" for="packs">Number of packs <strong id="packsValue">50</strong></label><input id="packs" type="range" min="1" max="400" value="50">
+          <label class="range-label" for="prob">Chance per pack <strong id="probValue">1.17%</strong></label><input id="prob" type="range" min="1" max="10" value="1.17" step="0.01">
+          <label class="field-label" for="packPrice">Price per pack (£)</label><input class="money-input" id="packPrice" type="number" min="0" step="0.01" value="4.50">
+          <div class="model-note">Default 1.17% is an illustrative category-level baseline used in one research scenario—not an official universal pull rate. Individual card odds can differ substantially.</div>
+        </div>
+        <div class="lab-results"><div class="result-top"><span>PROBABILITY SIMULATOR</span><span class="pixel-badge">LIVE CALC</span></div>
+          <div class="result-main"><span>Chance of ≥1 hit</span><strong id="chance">44.5%</strong><div class="meter"><span id="meterFill"></span></div></div>
+          <div class="result-pair"><div><small>EXPECTED SPEND</small><strong id="spend">£225.00</strong></div><div><small>CHANCE OF NO HIT</small><strong id="noHit">55.5%</strong></div></div>
+          <p id="labInsight" class="lab-insight">At this rate, a hit is possible—but far from guaranteed.</p>
+          <div class="formula">P(at least one) = 1 − (1 − p)<sup>n</sup></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide-section shell" id="guide">
+      <div class="section-heading"><div><div class="eyebrow">04 / THE COLLECTOR'S FIELD GUIDE</div><h2>Pick a <em>play style.</em></h2></div><p>You do not need the most expensive cards to build a collection that feels like yours.</p></div>
+      <div class="guide-grid">
+        <article class="guide-card"><div class="guide-icon">▦</div><span class="guide-number">QUEST 01</span><h3>The Set Completer</h3><p>Pick one set and fill gaps slowly. Track card numbers, set symbols, and reverse holos in a checklist.</p><span class="difficulty">PATIENCE: HIGH</span></article>
+        <article class="guide-card"><div class="guide-icon">✦</div><span class="guide-number">QUEST 02</span><h3>The Art Curator</h3><p>Collect cards with artwork you love, regardless of rarity. Illustration rares can make a binder feel like a gallery.</p><span class="difficulty">TASTE: REQUIRED</span></article>
+        <article class="guide-card"><div class="guide-icon">♡</div><span class="guide-number">QUEST 03</span><h3>The Pokémon Fan</h3><p>Choose one favourite Pokémon and collect its cards across different eras, artists, and styles.</p><span class="difficulty">JOY: MAXIMUM</span></article>
+        <article class="guide-card"><div class="guide-icon">£</div><span class="guide-number">QUEST 04</span><h3>The Budget Builder</h3><p>Set a monthly limit, make a wishlist, and compare singles with the uncertain cost of opening packs.</p><span class="difficulty">DISCIPLINE: HIGH</span></article>
+      </div>
+      <div class="budget-box"><div><div class="eyebrow">BONUS / BUDGET PLANNER</div><h3>Give your wallet a save point.</h3><p>Choose a budget and a target card price to see how many months it might take.</p></div>
+        <div class="budget-fields"><label>Monthly budget (£)<input id="monthlyBudget" type="number" value="25" min="0" step="1"></label><label>Target card (£)<input id="targetPrice" type="number" value="75" min="0" step="1"></label><div class="budget-answer"><small>ESTIMATED TIME</small><strong id="months">3 months</strong></div></div>
+      </div>
+    </section>
+
+    <section class="closing shell"><div class="closing-pixel">♥</div><div><div class="eyebrow">SAVE YOUR GAME</div><h2>Collect what <em>you love.</em></h2><p>Enjoy the hunt, learn the market, protect your cards, and keep the hobby fun.</p></div><a href="#home" class="pixel-btn">↑ BACK TO TOP</a></section>
+  </main>
+  <footer><span>© POKÉ POCKET CLUB</span><span>FAN-MADE · NOT AFFILIATED WITH NINTENDO, GAME FREAK OR THE POKÉMON COMPANY</span><span>INSERT COIN, NOT FOMO.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
